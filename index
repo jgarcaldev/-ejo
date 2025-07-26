@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tu premio</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    button {
+      padding: 1em 2em;
+      font-size: 1.5em;
+      background-color: #e91e63;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d81b60;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎁 ¡Clic para ver su premio!</h1>
+  <button onclick="window.location.href='premio.html'">Ver su premio</button>
+</body>
+</html>
