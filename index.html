@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tu premio</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 2em;
+    }
+    #inicio, #premio {
+      display: none;
+    }
+    #inicio.active, #premio.active {
+      display: block;
+    }
+    button {
+      padding: 1em 2em;
+      font-size: 1.5em;
+      background-color: #e91e63;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d81b60;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    h1 {
+      font-size: 2em;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <div id="inicio" class="active">
+    <h1>🎁 ¡Clic para ver su premio!</h1>
+    <button onclick="mostrarPremio()">Ver su premio</button>
+  </div>
+
+  <div id="premio">
+    <h1>🎟️ ENTRADA DOBLE PARA VER AL GORDO CEBOSO EN VIVO 🎤</h1>
+    <img src="img/nejo.jpg" alt="Ñejo">
+  </div>
+
+  <audio id="audio" loop>
+    <source src="music/nejo.mp3" type="audio/mpeg">
+    Tu navegador no soporta música 😢
+  </audio>
+
+  <script>
+    function mostrarPremio() {
+      document.getElementById('inicio').classList.remove('active');
+      document.getElementById('premio').classList.add('active');
+      const audio = document.getElementById('audio');
+      audio.play().catch(err => {
+        alert("Haz clic nuevamente para activar la música.");
+        console.log(err);
+      });
+    }
+  </script>
+</body>
+</html>
